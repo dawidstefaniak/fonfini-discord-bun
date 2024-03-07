@@ -1,25 +1,26 @@
 {
-    "name": "fonfini-discord",
-    "module": "index.ts",
-    "type": "module",
-    "scripts": {
-        "start": "node index.ts",
-        "dev": "bun src/index.ts",
-        "lint": "eslint . --ext .ts",
-        "lint:fix": "eslint . --ext .ts --fix",
-        "build": "bun build ./src/index.ts --outdir ./dist --target bun"
-    },
-    "devDependencies": {
-        "@types/bun": "latest",
-        "@typescript-eslint/eslint-plugin": "^7.1.1",
-        "@typescript-eslint/parser": "^7.1.1",
-        "eslint": "^8.57.0",
-        "prettier": "^3.2.5"
-    },
-    "peerDependencies": {
-        "typescript": "^5.0.0"
-    },
-    "dependencies": {
-        "discord.js": "^14.14.1"
-    }
+  "name": "fonfini-discord",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "dev": "bun src/index.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "croner": "^8.0.1",
+    "discord.js": "^14.14.1"
+  }
 }

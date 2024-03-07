@@ -3,13 +3,13 @@ import { CLIENT_ID, TOKEN } from "./consts";
 
 const commands = [
     {
-        name: "ping",
-        description: "Replies with Pong!",
+        name: "kalendarz",
+        description: "Wyświetla święto na dzisiaj."
     },
     {
-        name: "kalendarz",
-        description: "Wyświetla święto na dzisiaj.",
-    },
+        name: "refresh",
+        description: "Manualny refresh nazw kanałów"
+    }
 ];
 
 const rest = new REST({ version: "10" }).setToken(TOKEN);
@@ -19,7 +19,7 @@ export const registerCommands = async () => {
         console.log("Started refreshing application (/) commands.");
 
         await rest.put(Routes.applicationCommands(CLIENT_ID), {
-            body: commands,
+            body: commands
         });
 
         console.log("Successfully reloaded application (/) commands.");

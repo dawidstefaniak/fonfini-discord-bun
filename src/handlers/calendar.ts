@@ -19,7 +19,7 @@ export function getTodayCalendarEventName(): string {
         timeZone: "Europe/Warsaw",
         year: "numeric",
         month: "2-digit",
-        day: "2-digit",
+        day: "2-digit"
     });
     const [{ value: month }, , { value: day }, , { value: year }] =
         formatter.formatToParts(today);
@@ -27,7 +27,14 @@ export function getTodayCalendarEventName(): string {
     const result = dni.find(
         (calendarDay: CalendarDay): boolean =>
             calendarDay.month === Number(month) &&
-            calendarDay.day === Number(day),
+            calendarDay.day === Number(day)
     );
     return result?.name ?? "Nie znaleziono święta na dziś.";
 }
+
+export const getFormattedDate = () =>
+    new Date().toLocaleDateString("pl", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
