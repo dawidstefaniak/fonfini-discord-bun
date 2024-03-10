@@ -42,6 +42,9 @@ export const startServer = async () => {
 
         if (interaction.commandName === "kalendarz") {
             await interaction.reply(calendarCommand());
+
+
+            return;
         }
     });
 

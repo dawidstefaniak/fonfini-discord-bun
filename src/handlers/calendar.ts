@@ -21,7 +21,7 @@ export function getTodayCalendarEventName(): string {
         month: "2-digit",
         day: "2-digit"
     });
-    const [{ value: month }, , { value: day }, , { value: year }] =
+    const [{ value: day }, , { value: month }, , { value: year }] =
         formatter.formatToParts(today);
 
     const result = dni.find(
